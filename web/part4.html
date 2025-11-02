@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Part 4 - jQuery Animations</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #box { width:100px; height:100px; background:red; position:relative; }
+    button { margin-top:10px; padding:8px 12px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
+    button:hover { background:#0056b3; }
+  </style>
+</head>
+<body>
+
+  <h2>Part 4 - jQuery Animations</h2>
+  <div id="box"></div>
+  <button id="animateBtn">Start Animation</button>
+
+  <script>
+    $(document).ready(function() {
+      $("#animateBtn").click(function() {
+        $("#box")
+          .animate({ left: "250px" }, 500)
+          .animate({ top: "100px" }, 500)
+          .animate({ width: "50px", height: "50px", opacity: 0.5 }, 500)
+          .animate({ left: "0px", top: "0px", width: "100px", height: "100px", opacity: 1 }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>

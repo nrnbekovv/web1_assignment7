@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Part 5 - jQuery Mini Project (Accordion)</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    h2 { text-align: center; color: #007bff; }
+    .section { margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; background: white; }
+    .question { padding: 10px; margin: 0; background: #007bff; color: white; cursor: pointer; }
+    .answer { padding: 10px; display: none; }
+  </style>
+</head>
+<body>
+
+  <h2>FAQ - Accordion Menu</h2>
+
+  <div class="section">
+    <h4 class="question">What is jQuery?</h4>
+    <p class="answer">jQuery is a JavaScript library that simplifies HTML DOM manipulation, event handling, and animation.</p>
+  </div>
+
+  <div class="section">
+    <h4 class="question">Why use it?</h4>
+    <p class="answer">It makes JavaScript code shorter, cleaner, and easier to maintain.</p>
+  </div>
+
+  <div class="section">
+    <h4 class="question">Where is it used?</h4>
+    <p class="answer">It's used in interactive websites and web apps for animations, effects, and AJAX.</p>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $(".question").click(function() {
+        $(this).next(".answer").slideToggle(400);
+        $(".answer").not($(this).next()).slideUp(400);
+      });
+    });
+  </script>
+
+</body>
+</html>

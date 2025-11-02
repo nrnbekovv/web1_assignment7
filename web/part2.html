@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Part 2 - jQuery Effects</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    #panel { display:none; background:#f1f1f1; padding:15px; margin-top:10px; border-radius:5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Part 2 - jQuery Effects</h2>
+
+  <h3>Task 2: Visibility Methods</h3>
+  <p id="text">This paragraph will hide or show.</p>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button id="toggle">Toggle</button>
+
+  <h3>Task 3: Fade Methods</h3>
+  <img id="food" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIKaDES6PddzgrIKNKpNVK0xtp9Nr-kWOaxQ&s" width="200" alt="Burger">
+  <br>
+  <button id="fadeOut">Fade Out</button>
+  <button id="fadeIn">Fade In</button>
+  <button id="fadeToggle">Fade Toggle</button>
+
+  <h3>Task 4: Slide Methods</h3>
+  <button id="slideUp">Slide Up</button>
+  <button id="slideDown">Slide Down</button>
+  <button id="slideToggle">Slide Toggle</button>
+  <div id="panel">
+    <p>This panel slides up and down smoothly!</p>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // Task 2
+      $("#hide").click(() => $("#text").hide());
+      $("#show").click(() => $("#text").show());
+      $("#toggle").click(() => $("#text").toggle());
+
+      // Task 3
+      $("#fadeOut").click(() => $("#food").fadeOut(1000));
+      $("#fadeIn").click(() => $("#food").fadeIn(1000));
+      $("#fadeToggle").click(() => $("#food").fadeToggle(1000));
+
+      // Task 4
+      $("#slideUp").click(() => $("#panel").slideUp(600));
+      $("#slideDown").click(() => $("#panel").slideDown(600));
+      $("#slideToggle").click(() => $("#panel").slideToggle(600));
+    });
+  </script>
+
+</body>
+</html>
